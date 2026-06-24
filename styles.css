@@ -128,15 +128,6 @@ body {
     }
 }
 
-@keyframes shimmer {
-    0% {
-        background-position: -1000px 0;
-    }
-    100% {
-        background-position: 1000px 0;
-    }
-}
-
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -172,6 +163,22 @@ body {
     }
     to {
         width: 60px;
+    }
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -781,7 +788,7 @@ body {
 
 .star-badge, .rocket-badge, .custom-badge {
     font-size: 28px;
-    animation: rotate 2s linear infinite;
+    animation: rotate 3s linear infinite;
 }
 
 .pricing-highlight {
@@ -1021,16 +1028,6 @@ body {
 .social-icon:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
-}
-
-/* Rotation Animation */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 /* Responsive Design */
