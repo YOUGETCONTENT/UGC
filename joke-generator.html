@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="joke-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-card">
+            <div class="joke-header">
+                <h1>😂 Joke Generator</h1>
+                <p>Get a random joke to brighten your day!</p>
+            </div>
+
+            <div class="joke-content" id="jokeContent">
+                <p class="loading">Loading a joke...</p>
+            </div>
+
+            <div class="joke-type" id="jokeType">
+                <!-- Joke type badge will appear here -->
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="getJokeBtn">
+                    <span class="btn-icon">🎭</span>
+                    Get New Joke
+                </button>
+                <button class="btn btn-secondary" id="copyJokeBtn">
+                    <span class="btn-icon">📋</span>
+                    Copy Joke
+                </button>
+                <button class="btn btn-secondary" id="shareJokeBtn">
+                    <span class="btn-icon">🔗</span>
+                    Share
+                </button>
+            </div>
+
+            <div class="joke-filters">
+                <h3>Filter by Type:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-type="all">All</button>
+                    <button class="filter-btn" data-type="general">General</button>
+                    <button class="filter-btn" data-type="programming">Programming</button>
+                    <button class="filter-btn" data-type="knock-knock">Knock-Knock</button>
+                </div>
+            </div>
+
+            <div class="stats">
+                <p>Jokes loaded: <span id="jokeCount">0</span></p>
+            </div>
+
+            <div class="notification" id="notification"></div>
+        </div>
+    </div>
+
+    <script src="joke-script.js"></script>
+</body>
+</html>
